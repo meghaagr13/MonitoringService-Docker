@@ -1,0 +1,23 @@
+version: '3'
+services:
+    vm1:
+        image: "httpd:2.4"
+        working_dir: /usr/local/apache2/htdocs/
+        volumes:
+            - ./vm1/:/usr/local/apache2/htdocs/
+        ports:
+                - "8080:80"
+    vm2:
+        image: "httpd:2.4"
+        working_dir: /usr/local/apache2/htdocs/
+        volumes:
+            - ./vm2/:/usr/local/apache2/htdocs/ 
+        ports:
+                - "8081:80"
+    vm3:
+       image: "vm3"
+       tty: true
+       volumes:
+         - ./vm3/:/var/www/html/
+       expose:
+         - "80"

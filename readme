@@ -1,0 +1,19 @@
+The following code is for establishing a monitoring software.
+The repliction and testing is done on docker.
+
+vm1: runs a service to generate random number
+vm2: runs a service to geenerate random number
+vm3: tests whether both services are up and display their content dynamically and if machines are up via ping
+
+Tech Stack : Service1/2 - javascript/Apache
+		Monitoring Service : php/Apache
+
+Features: 
+1) Dynamiclaly uploads div without refreshing page in html according to response from server
+2) Well organized code via docker-compose
+3) Alternate bash files are provided for running on individual machines
+
+Running Instructions:
+1) For running clone this code and run "bash run.sh"
+2) Use the generated ip to open it in your browser
+3) For stopping all containers use "docker-compose down" 
